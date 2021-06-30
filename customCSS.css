@@ -1,0 +1,81 @@
+
+/*
+
+Custom Code
+
+*/
+
+/* Hide fillers */
+#customizableui-special-spring1, #customizableui-special-spring2{
+	display:none;
+}
+
+.tab-background{
+	padding-bottom:2px;
+}
+
+/* Make the url bar highlighted */
+#urlbar-input-container {
+	background:rgba(255,255,255,0.1);
+}
+
+/* This one is the forward button  */
+#forward-button { display: block !important; }
+
+
+/* This one is the back button  */
+#back-button { display: block !important; }
+
+/* Weird bug fix regarding the input size on select */
+#urlbar-input-container{
+	height:30px;
+}
+
+/* Make inactive tabs darker */
+.tabbrowser-tab:not([selected="true"]):not([multiselected="true"]):not([pinned="true"]) .tab-background{
+	border-radius: var(--tab-border-radius)!important;
+	background-color:rgba(0,0,0,0.5)!important;
+ }
+
+/* Make the tabs bigger */
+.tabbrowser-tab[fadein]:not([pinned]) {
+  max-width: 500px!important;
+}
+.tabbrowser-tab[fadein]:not([pinned]):not([selected="true"]) {
+  max-width: 500px!important;
+}
+
+/* Hide tab bar icons for folders */
+toolbarbutton.bookmark-item[type="menu"]::after {
+        content: "";
+        position: absolute;
+        transform: translateY(-50%);
+        padding-left: 2px;
+}
+
+toolbarbutton.bookmark-item[type="menu"] > .toolbarbutton-icon {
+        display: none !important;
+}
+
+toolbarbutton.bookmark-item[type="menu"] {
+        padding-right: 9px !important;
+}
+
+ 
+
+/* You can center the Bookmarks here */
+/*#PlacesToolbarItems{ -moz-box-pack: center }*/
+ 
+
+/* Make the font size bigger */
+ #PlacesToolbarItems > .bookmark-item{
+	 font-size:24px;
+ }
+ 
+ /* Change the apparence of the separator */
+ #PlacesToolbarItems > toolbarseparator:before {
+	background-color: rgba(255,255,255,0.6);
+	width: 15px !important;
+	margin: 20px 0 !important;
+	border:none!important;
+}
