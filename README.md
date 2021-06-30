@@ -12,7 +12,7 @@ A modified version of Andreas Grafen's ["ag-proton"](https://github.com/andreasg
 
 ![first](images/previews.png)  
 Search previews are enabled.
-*This is copied form [this](https://www.reddit.com/r/FirefoxCSS/comments/nwre3i/agproton_based_on_simplerentfox_but_up_to_date/) reddit thread.*
+*Copied form [this](https://www.reddit.com/r/FirefoxCSS/comments/nwre3i/agproton_based_on_simplerentfox_but_up_to_date/) reddit thread.*
 
 <br/>
 
