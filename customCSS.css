@@ -5,11 +5,15 @@ Custom Code
 
 */
 
-/* Hide fillers */
-#customizableui-special-spring1, #customizableui-special-spring2{
-	display:none;
+#customizableui-special-spring1{
+	width:25px!important;
+	-moz-box-flex: 1!important;
 }
 
+/* Hide filler */
+#customizableui-special-spring2{
+	display:none;
+}
 .tab-background{
 	padding-bottom:2px;
 }
