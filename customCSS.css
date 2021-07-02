@@ -83,3 +83,13 @@ toolbarbutton.bookmark-item[type="menu"] {
 	margin: 20px 0 !important;
 	border:none!important;
 }
+
+#identity-box { 
+	display: -moz-box!important; 
+}
+#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon{
+	color:lightgreen!important;
+}
+#identity-permission-box{
+	display:none!important;
+}
