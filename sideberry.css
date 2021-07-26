@@ -1,0 +1,186 @@
+.Tab .fav {
+  width: 24px;
+  height: 24px;
+  margin: 0 6px 0 7px;
+}
+
+#root {
+  --nav-btn-width: 36px;
+  --nav-btn-height: 28px;
+  --tabs-pinned-height: 28px;
+  --tabs-pinned-width: 28px;
+
+  --bookmarks-separator-height: 8px;
+  --border-fg: transparent !important;
+  --pinned-dock-overlay-bg: transparent;
+}
+
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
+  #root[data-style="auto"],
+  #root[data-style="dark"] {
+    --bg: #2b2a33;
+
+    --btn-shadow-active: 0 0 0 1px #fff2;
+
+    --ctx-menu-bg: #111;
+    --ctx-menu-bg-hover: #222;
+    --ctx-menu-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.157);
+
+    --nav-btn-activated-bg: #222;
+
+    --tabs-bg-hover: #111;
+    --tabs-bg-active: #222;
+    --tabs-activated-bg: #ddd;
+    --tabs-activated-fg: #000;
+
+    --bookmarks-node-bg-hover: #fff1;
+    --bookmarks-node-bg-active: #fff2;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  #root[data-style="auto"],
+  #root[data-style="light"] {
+    --btn-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.141);
+    --btn-shadow-hover: 0 1px 2px 0 rgba(0, 0, 0, 0.196);
+    --btn-shadow-active: 0 0 0 1px rgba(0, 0, 0, 0.071);
+
+    --ctx-menu-bg: #f2f2f2;
+    --ctx-menu-bg-hover: #e1e1e1;
+
+    --nav-btn-activated-bg: #ddd;
+
+    --tabs-bg-hover: #eee;
+    --tabs-bg-active: #ddd;
+    --tabs-activated-bg: #444;
+    --tabs-activated-fg: #fff;
+  }
+}
+
+.ScrollBox > .top-shadow {
+  box-shadow: 0 1px 12px 0 var(--bg);
+}
+.ScrollBox > .bottom-shadow {
+  box-shadow: 0 -1px 12px 0 var(--bg);
+}
+
+.Tab {
+  left: -1px;
+}
+.Tab .ctx {
+  top: 0;
+  width: var(--scroll-progress-h);
+  height: 100%;
+  box-shadow: none;
+}
+
+.CtxMenu .box {
+  border-radius: 1px;
+}
+.CtxMenu .inline-group:not(:last-of-type) {
+  padding-bottom: 0;
+  box-shadow: none;
+}
+.CtxMenu .opt[data-separator]:before {
+  background-color: transparent;
+}
+
+.TabsPanel .container,
+.PinnedTab .ctx,
+.Bookmarks .bookmarks-wrapper,
+.Sidebar[data-hidden-panels-bar] .nav,
+#root[data-nav-layout="horizontal"] .Sidebar .nav,
+#root[data-nav-layout="hidden"] .Sidebar .nav,
+#root[data-nav-layout="vertical"] .Sidebar .nav {
+  box-shadow: none;
+}
+
+#root[data-pinned-tabs-position="panel"] .PinnedDock,
+#root[data-pinned-tabs-position="panel"][data-pinned-tabs-list] .PinnedDock,
+#root[data-pinned-tabs-position="left"] .PinnedDock,
+#root[data-pinned-tabs-position="right"] .PinnedDock,
+#root[data-pinned-tabs-position="top"] .PinnedDock {
+  padding: 0;
+  box-shadow: none;
+}
+.PinnedDock:before,
+.PinnedDock:after {
+  display: none !important;
+}
+
+.Tab:hover .fav,
+.PinnedTab:hover .fav,
+.PinnedTab .audio-badge:hover {
+  opacity: 0.9;
+}
+.Separator .body:after {
+  height: 0;
+  background-color: none;
+  box-shadow: none;
+}
+.Confirm .msg-box {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.086), 0 0 16px 0 rgba(0, 0, 0, 0.196);
+}
+.NavigationBar .panel-btn:hover:not([data-active]),
+.HiddenPanelsBar .hidden-panel:hover {
+  background-color: var(--tabs-bg-hover);
+  opacity: 1;
+}
+.SelectBookmarksFolderBar {
+  box-shadow: 0 -1px 12px 0 rgba(0, 0, 0, 0.337),
+    0 -1px 0 0 rgba(0, 0, 0, 0.071);
+}
+
+.Sidebar .panel-btn .len {
+  top: -1px;
+  padding: 0;
+  background: none;
+}
+
+.Sidebar .panel-btn .len {
+  text-shadow: -1px 1px 1px var(--bg), 1px 1px 1px var(--bg),
+    -2px 1px 1px var(--bg), 0 1px 1px var(--bg), 2px 1px 1px var(--bg);
+}
+.Sidebar .panel-btn:hover .len {
+  text-shadow: -1px 1px 1px var(--tabs-bg-hover),
+    1px 1px 1px var(--tabs-bg-hover), -2px 1px 1px var(--tabs-bg-hover),
+    0 1px 1px var(--tabs-bg-hover), 2px 1px 1px var(--tabs-bg-hover);
+}
+.Sidebar .panel-btn[data-active] .len {
+  text-shadow: -1px 1px 1px var(--nav-btn-activated-bg),
+    1px 1px 1px var(--nav-btn-activated-bg),
+    -2px 1px 1px var(--nav-btn-activated-bg),
+    0 1px 1px var(--nav-btn-activated-bg),
+    2px 1px 1px var(--nav-btn-activated-bg);
+}
+
+.Sidebar .dimmer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Tab[data-active] .fav > .child-count {
+  color: var(--tabs-activated-fg);
+}
+.Tab[data-active] .audio > svg,
+.PinnedTab[data-active] .audio-badge > svg {
+  fill: var(--tabs-activated-fg);
+}
+
+.Tab:hover[data-active]:not([data-selected]) .title,
+.PinnedTab:hover[data-active]:not([data-selected]) .title {
+  color: var(--tabs-activated-fg);
+}
+
+.Tab[data-active]:active {
+  background-color: var(--tabs-activated-bg);
+}
+
+.Tab .placeholder > svg,
+.PinnedTab .placeholder > svg,
+.Bookmark .fav > .placeholder > svg {
+  fill: var(--tabs-fg);
+}
+.Tab[data-active] .placeholder > svg,
+.PinnedTab[data-active] .placeholder > svg {
+  fill: var(--tabs-activated-fg);
+}
