@@ -1,26 +1,15 @@
-# Custom extension of the ag.proton design
-A modified version of Andreas Grafen's ["ag-proton"](https://github.com/andreasgrafen/ag.proton) design for firefox.
+# Minimal Firefox Design
 
-## Overview of changes
-![Main View](images/main_view.png)
-- Address bar is highlighted
-- Inactive tabs are darker
-- Tabs size is increased
-- Back and Forward navigation is displayed
+The older version is archived in the "old_version" branch. The new design features side tabs ([Sidebery](https://addons.mozilla.org/de/firefox/addon/sidebery/)) and a new unique look.
 
-<br/>
+Note: The icons in the context menu are not from me! Find out more information about them [here](https://www.reddit.com/r/FirefoxCSS/comments/osles3/menu_icons/).
 
-![first](images/previews.png)  
-Search previews are enabled.
-*Copied form [this](https://www.reddit.com/r/FirefoxCSS/comments/nwre3i/agproton_based_on_simplerentfox_but_up_to_date/) reddit thread.*
+## Demonstration
 
-<br/>
-
-![Main View](images/bookmarks.png)
-- Bookmark-Size is increased for better accessibility
-- Separator is redesigned
+![Main View](images/demo.gif)
 
 ## Installation
-Get the main `userChrome.css` from the original [project](https://github.com/andreasgrafen/ag.proton) and append the styles from the `customCss.css` of this repository.
 
-*Lookup [here](https://www.userchrome.org/how-create-userchrome-css.html) if you dont know how to modify your `userChrome.-css`.*
+Paste the styles from the provided css styles into your firefox profile. Further, copy the sidebery styles into the plugins custom css area.
+
+_Lookup [here](https://www.userchrome.org/how-create-userchrome-css.html) if you dont know how to modify your `userChrome.css`._
